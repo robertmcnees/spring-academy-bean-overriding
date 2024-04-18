@@ -1,7 +1,6 @@
 package academy.spring.framework.beanoverriding;
 
 import academy.spring.framework.beanoverriding.service.MyService;
-import academy.spring.framework.beanoverriding.service.ProdServiceImpl;
 import academy.spring.framework.beanoverriding.service.SimplifiedServiceImpl;
 import org.junit.jupiter.api.Test;
 
