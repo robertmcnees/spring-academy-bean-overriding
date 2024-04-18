@@ -5,6 +5,7 @@ import academy.spring.framework.beanoverriding.service.ProdServiceImpl;
 import academy.spring.framework.beanoverriding.service.SimplifiedServiceImpl;
 import org.junit.jupiter.api.Test;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.context.ApplicationContext;
 import org.springframework.test.context.bean.override.convention.TestBean;
@@ -16,12 +17,12 @@ import static org.junit.jupiter.api.Assertions.assertNotNull;
 @SpringBootTest
 public class BeanOverridingTestBeanTests {
 
-	@TestBean
+	// Add TestBean annotation
+	@Autowired
 	MyService customService;
 
-	static MyService customServiceTestOverride() {
-		return new SimplifiedServiceImpl();
-	}
+	// Add static factory method
+
 
 	@Test
 	void testBeanFromApplicationContext(ApplicationContext context) {
